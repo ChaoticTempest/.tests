@@ -8,5 +8,9 @@ on:
 
 jobs:
   build_binary:
+    runs-on: macOS-latest
     steps:
+    - uses: hecrj/setup-rust-action@v1
+      with:
+        rust-version: nightly-2020-03-19
     - run: echo "HELLO WORLD"
